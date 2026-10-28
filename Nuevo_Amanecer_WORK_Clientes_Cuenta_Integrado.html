@@ -1363,6 +1363,47 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
  #saleItems .sale-cart-line-total{font-size:13px}
 }
 
+
+/* Proyecto HTML · Reducir únicamente el cuadro móvil de cliente de 67px a 52px,
+   y los márgenes que lo rodean. Sin alterar funciones ni el resto del POS. */
+@media(max-width:849px){
+ .client{
+  box-sizing:border-box;height:52px;min-height:52px;max-height:52px;
+  flex:0 0 52px;margin:6px 11px 5px;padding:0 8px;gap:6px;
+  align-items:center
+ }
+ .client .client-person{
+  box-sizing:border-box;width:38px;height:38px;flex:0 0 38px;
+  border-radius:10px;padding:0
+ }
+ .client .client-person svg{width:24px;height:24px}
+ .client .client-picker-trigger{
+  height:44px;min-height:44px;flex:1 1 auto;min-width:0;
+  padding:0 2px;gap:5px;justify-content:center
+ }
+ .client .client-picker-trigger .name{
+  font-size:11.5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap
+ }
+ .client .client-picker-trigger .chev{font-size:12px}
+ .client .add{
+  box-sizing:border-box;display:flex;align-items:center;justify-content:center;
+  height:42px;min-height:42px;flex:0 0 auto;padding:0 8px;
+  font-size:11.5px;border-radius:10px;white-space:nowrap
+ }
+ .client .scan{
+  box-sizing:border-box;display:grid;place-items:center;
+  width:44px;height:44px;min-height:44px;flex:0 0 44px;
+  padding:0 0 0 6px;margin:0;border-left:1px solid #dbe5ea
+ }
+ .client .scan-icon{width:24px;height:24px}
+}
+@media(max-width:360px){
+ .client{padding-inline:6px;gap:4px}
+ .client .client-person{width:36px;flex-basis:36px}
+ .client .client-picker-trigger .name{font-size:10.5px}
+ .client .add{padding:0 6px;font-size:11px}
+ .client .scan{width:42px;flex-basis:42px}
+}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
