@@ -1316,6 +1316,53 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
  #saleItems .sale-cart-item{grid-template-columns:82px minmax(0,1fr) 82px}
 }
 
+/* Proyecto HTML · Venta actual compacta: seis artículos visibles en móviles altos.
+   Se ajusta exclusivamente el espacio ocupado por cada fila, no los cálculos. */
+@media(max-width:849px){
+ #saleItems{padding-top:2px;gap:0}
+ #saleItems .sale-cart-item{
+  grid-template-columns:64px minmax(0,1fr) 70px;
+  gap:8px;min-height:79px;padding:5px 1px 5px;
+  align-items:center
+ }
+ #saleItems .sale-cart-photo{width:64px;height:68px;align-self:center}
+ #saleItems .sale-cart-photo-image{width:100%;height:100%;object-fit:contain}
+ #saleItems .sale-cart-photo-fallback{width:56px;height:56px;font-size:22px}
+ #saleItems .sale-cart-details{gap:2px;padding:0}
+ #saleItems .sale-cart-name{font-size:12.5px;line-height:1.18;font-weight:690}
+ #saleItems .sale-cart-unit{font-size:11.5px;line-height:1.1}
+ #saleItems .sale-cart-stepper{gap:5px;margin-top:2px}
+ .background-content #saleItems .sale-cart-qty-btn{
+  width:34px;height:34px;flex:0 0 34px;border-radius:7px;
+  font-size:22px;padding:0;margin:0
+ }
+ #saleItems .sale-cart-qty-value{min-width:18px;font-size:12px}
+ #saleItems .sale-cart-side{gap:4px;align-self:stretch}
+ .background-content #saleItems .sale-cart-remove{
+  width:26px;height:26px;padding:2px;margin:0
+ }
+ #saleItems .sale-cart-remove svg{width:19px;height:19px}
+ #saleItems .sale-cart-line-total{
+  font-size:14px;line-height:1.1;padding-bottom:3px
+ }
+}
+@media(max-width:380px){
+ #saleItems .sale-cart-item{
+  grid-template-columns:54px minmax(0,1fr) 64px;
+  gap:6px;min-height:76px;padding:4px 0 4px
+ }
+ #saleItems .sale-cart-photo{width:54px;height:63px}
+ #saleItems .sale-cart-photo-fallback{width:49px;height:49px}
+ #saleItems .sale-cart-name{font-size:11.7px}
+ #saleItems .sale-cart-unit{font-size:11px}
+ #saleItems .sale-cart-stepper{gap:4px;margin-top:2px}
+ .background-content #saleItems .sale-cart-qty-btn{
+  width:32px;height:32px;flex-basis:32px;font-size:20px
+ }
+ #saleItems .sale-cart-qty-value{min-width:14px;font-size:12px}
+ #saleItems .sale-cart-line-total{font-size:13px}
+}
+
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
