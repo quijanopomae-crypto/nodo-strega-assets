@@ -1075,6 +1075,26 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
 .catalog{width:min(480px,90vw)}.catalog .catalog-products{min-height:0}
 }
 @media(min-width:850px) and (max-width:1090px){body{grid-template-columns:155px minmax(0,1fr);column-gap:11px}.pro-sidebar{padding-inline:7px}.client{gap:7px}.pro-heading h2{font-size:22px}.footer .total{gap:8px}.footer .pay{flex-basis:185px}.background-content{grid-template-columns:minmax(260px,1fr) minmax(230px,1fr);gap:10px}.pro-brand strong{font-size:14px}}
+
+/* Proyecto HTML: el carrito móvil crece hasta tocar Cobrar sin dejar huecos.
+   Solo composición en móvil; no altera las funciones ni el escritorio. */
+@media(max-width:849px){
+  html,body{height:100%}
+  body,body.customer-selected{
+    height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden
+  }
+  .pro-topbar,.client{flex-shrink:0}
+  .background-content,body.customer-selected .background-content{
+    flex:1 1 auto;min-height:0!important;overflow-y:auto;margin-bottom:0
+  }
+  .footer,body.customer-selected .footer{
+    position:relative;bottom:auto;left:auto;right:auto;transform:none;flex:0 0 104px
+  }
+  .account-strip,body.customer-selected .account-strip{
+    position:relative;bottom:auto;left:auto;right:auto;transform:none;
+    flex:0 0 48px;width:100%;max-width:none
+  }
+}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
