@@ -713,24 +713,18 @@ body.chat-active{overflow:hidden}
  .drawer-nav-text strong{font-size:14px}
  .drawer-nav-text small{font-size:10px}
 }
-/* Proyecto HTML: menú lateral al 50% del ancho previo; se conservan enlaces y subtítulos. */
-.drawer{width:clamp(150px,41vw,195px)}
-.drawer-user-header{min-height:91px;padding:12px 8px;gap:6px}
-.drawer-user-avatar{width:30px;height:30px;flex-basis:30px}
-.drawer-user-avatar .drawer-svg{width:20px;height:20px}
-.drawer-user-data{gap:2px}
-.drawer-user-data strong{font-size:12px}
-.drawer-user-data span{font-size:9px}
-.drawer button.drawer-close{flex-basis:26px;width:26px;height:28px;border-radius:8px}
-.drawer-close .drawer-svg{width:18px;height:18px}
-.drawer-nav{padding:10px 6px 16px}
-.drawer button.drawer-nav-item{gap:7px;padding:9px 4px;min-height:63px}
-.drawer button.drawer-nav-item.active{min-height:63px}
-.drawer-nav-icon{flex-basis:27px;width:27px;height:30px;border-radius:8px}
-.drawer-nav-icon .drawer-svg{width:17px;height:17px}
-.drawer-nav-text strong{font-size:11.5px;line-height:1.2;overflow-wrap:anywhere}
-.drawer-nav-text small{font-size:9px;line-height:1.25;overflow-wrap:anywhere}
-.drawer-nav-chevron{display:none}
+/* Proyecto HTML: solo el encabezado Usuario / Dueño del menú móvil,
+   reducido de 113px a 56px (~50%). El ancho y las opciones del menú se conservan. */
+@media(max-width:849px){
+  .drawer-user-header{height:56px;min-height:56px;flex:0 0 56px;padding:6px 12px;gap:10px}
+  .drawer-user-avatar{width:34px;height:34px;flex:0 0 34px}
+  .drawer-user-avatar .drawer-svg{width:21px;height:21px}
+  .drawer-user-data{gap:1px}
+  .drawer-user-data strong{font-size:12px;line-height:1.1}
+  .drawer-user-data span{font-size:10px;line-height:1.2}
+  .drawer button.drawer-close{flex:0 0 29px;width:29px;height:29px;border-radius:8px;align-self:center}
+  .drawer-close .drawer-svg{width:18px;height:18px}
+}
 @media(prefers-reduced-motion:reduce){.drawer{transition:none!important}}
 
 
