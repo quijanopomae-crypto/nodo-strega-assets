@@ -1369,7 +1369,7 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
 @media(max-width:849px){
  .client{
   box-sizing:border-box;height:52px;min-height:52px;max-height:52px;
-  flex:0 0 52px;margin:6px 11px 5px;padding:0 8px;gap:6px;
+  flex:0 0 52px;margin:0 11px;padding:0 8px;gap:6px;
   align-items:center
  }
  .client .client-person{
@@ -1403,6 +1403,13 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
  .client .client-picker-trigger .name{font-size:10.5px}
  .client .add{padding:0 6px;font-size:11px}
  .client .scan{width:42px;flex-basis:42px}
+}
+/* Eliminar huecos y doble división entre cabecera, cliente y Venta actual en móvil. */
+@media(max-width:849px){
+ .client{border-top:0;border-bottom:0;border-radius:0;box-shadow:none}
+ .background-content,body.customer-selected .background-content{
+  margin-top:0;border-top:0;border-radius:0 0 16px 16px
+ }
 }
 &lt;/style&gt;
 &lt;/head&gt;
