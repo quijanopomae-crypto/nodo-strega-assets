@@ -955,7 +955,7 @@ html,body{height:100%;background:#fff}
   top:18%;
   width:72%;
   pointer-events:none;
-  animation:naScanSweep 2.7s linear infinite;
+  animation:naScanSweep 2.7s linear infinite!important;
 }
 @keyframes naScanSweep{
   0%{top:18%;opacity:0}
@@ -963,9 +963,7 @@ html,body{height:100%;background:#fff}
   90%{opacity:1}
   100%{top:82%;opacity:0}
 }
-@media(prefers-reduced-motion:reduce){
-  .scan-camera .scan-beam{animation:none;top:50%;opacity:1}
-}
+
 .scan-manual{min-height:40px;font-size:13px;color:#068d9b}
 .scan-demo-hint{font-size:10.5px}
 @media(max-width:360px){.top h1{font-size:17px}.client .name{font-size:11.5px}.client .add{font-size:11.5px}.catalog-products .pname{font-size:9px}}
