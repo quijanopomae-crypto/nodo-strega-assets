@@ -1179,8 +1179,9 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
  align-items:center;gap:9px;text-align:center;overflow-wrap:anywhere
 }
 .generated-catalog-thumb{
- display:block;width:100%;height:102px;flex:0 0 102px;object-fit:contain;
- background:#f8fbfd;border:1px solid #eef3f6;border-radius:11px;padding:7px
+ display:block;width:100%;max-width:174px;aspect-ratio:1/1;height:auto;flex:0 0 auto;
+ object-fit:contain;object-position:center;background:#fff;border:0;border-radius:10px;
+ padding:0;box-shadow:none
 }
 .generated-catalog-placeholder{display:grid;place-items:center;color:#0b8c98;font-size:27px;background:#edf8fa}
 .generated-catalog-product>span:last-child{
@@ -1222,7 +1223,7 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
  .generated-catalog-rows{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
  .generated-catalog-item{gap:5px;padding:9px 8px 10px;border-radius:12px}
  .generated-catalog-product{gap:7px}
- .generated-catalog-thumb{height:79px;flex-basis:79px;padding:5px;border-radius:9px}
+ .generated-catalog-thumb{max-width:100%;height:auto;flex:0 0 auto;aspect-ratio:1/1;padding:0;border-radius:9px}
  .generated-catalog-product>span:last-child{font-size:11.5px;min-height:32px}
  .generated-catalog-qty{font-size:10px;padding:3px 6px}
  .generated-catalog-price{font-size:10px}
@@ -1235,7 +1236,7 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
 @media(max-width:330px){
  .generated-catalog-rows{gap:7px}
  .generated-catalog-item{padding:8px 6px}
- .generated-catalog-thumb{height:65px;flex-basis:65px}
+ .generated-catalog-thumb{max-width:100%;height:auto;flex:0 0 auto;aspect-ratio:1/1}
  .generated-catalog-product>span:last-child{font-size:10.5px}
 }
 @media print{
@@ -1249,7 +1250,7 @@ body,body.customer-selected{max-width:none;margin:0;box-shadow:none;overflow:aut
  .generated-catalog-close,.generated-catalog-actions,.generated-catalog-note{display:none!important}
  .generated-catalog-rows{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
  .generated-catalog-item{break-inside:avoid;page-break-inside:avoid;box-shadow:none!important;border:1px solid #dbe8ed!important}
- .generated-catalog-thumb{height:100px!important;flex-basis:100px!important}
+ .generated-catalog-thumb{width:100%!important;max-width:155px!important;height:auto!important;flex-basis:auto!important;aspect-ratio:1/1!important;padding:0!important}
  .generated-catalog-total{break-inside:avoid;page-break-inside:avoid}
 }
 
